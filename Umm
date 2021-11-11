@@ -23,4 +23,7 @@ git reset commitnumber앞6자리 --hard
 git revert commitnumber앞6자리
 git branch 새로만들branch이름
 git checkout 브랜치이름
-git merge
+git merge 병합할branch
+git log --graph --all --decorate
+git rebase 재배치할브랜치
+git branch -D 브랜치이름
