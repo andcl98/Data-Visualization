@@ -18,3 +18,9 @@ Done!
 git status
 git add -A
 git commit -m "Write name tag here"
+git log
+git reset commitnumber앞6자리 --hard
+git revert commitnumber앞6자리
+git branch 새로만들branch이름
+git checkout 브랜치이름
+git merge
