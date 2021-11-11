@@ -1,0 +1,20 @@
+How to store "now"
+
+1.
+git init
+
+2.
+git config --global user.name "Write username here"
+
+3.
+config --global user.email "Write email here"
+
+
+/////////////////////////////////////////////////////
+Done!
+/////////////////////////////////////////////////////
+
+
+git status
+git add -A
+git commit -m "Write name tag here"
