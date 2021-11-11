@@ -28,7 +28,11 @@ git log --graph --all --decorate
 git rebase 재배치할브랜치
 git branch -D 브랜치이름
 git push origin main
-
+git fetch
+git pull origin main
+git checkout -b 브랜치이름 : git branch + git checkout
+git branch : 로컬에 있는 branch확인
+git branch -a : 로컬,원격 branch확인
 
 linux 명령어
 1. 마우스로 파일 만들기 귀찮을 때: touch 파일명
