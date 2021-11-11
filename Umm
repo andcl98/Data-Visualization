@@ -1,20 +1,9 @@
-How to store "now"
+Command
 
-1.
+<Git>
 git init
-
-2.
 git config --global user.name "Write username here"
-
-3.
 config --global user.email "Write email here"
-
-
-/////////////////////////////////////////////////////
-Done!
-/////////////////////////////////////////////////////
-
-
 git status
 git add -A
 git commit -m "Write name tag here"
@@ -34,6 +23,10 @@ git checkout -b 브랜치이름 : git branch + git checkout
 git branch : 로컬에 있는 branch확인
 git branch -a : 로컬,원격 branch확인
 
-linux 명령어
+<Linux>
 1. 마우스로 파일 만들기 귀찮을 때: touch 파일명
 touch .gitignore
+
+<VSCode>
+1. Kill Terminal: Ctrl + C
+2. Open Terminal: Ctrl + `
