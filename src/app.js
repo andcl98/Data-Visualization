@@ -1,6 +1,7 @@
 import React from "react";
-import asea from "./asea.png";
 import { arc } from "d3";
+import { BackgroundCircle } from "./Background";
+import { Eyes } from "./Eyes";
 
 const width = 960;
 const height = 500;
@@ -13,33 +14,31 @@ const eyeRadius = 30;
 const mouthWidth = 20;
 const mouthRadius = 120;
 
-const mouthArc = arc()
-  .innerRadius(mouthRadius)
-  .outerRadius(mouthRadius + mouthWidth)
-  .startAngle(Math.PI / 2)
-  .endAngle(Math.PI * 1.5);
+<h1>YAOOOOOOA!</h1>;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={asea} className="App-logo" alt="asea-building" />
-        <h1>YAOOOOOOA!</h1>
-        <svg width={width} height={height}>
-          <g transform={`translate(${centerX}, ${centerY})`}>
-            <circle
-              r={centerY - strokeWidth / 2}
-              fill="yellow"
-              stroke="black"
-              strokeWidth={strokeWidth}
-            />
-            <circle cx={-eyeOffsetX} cy={-eyeOffsetY} r={eyeRadius} />
-            <circle cx={eyeOffsetX} cy={-eyeOffsetY} r={eyeRadius} />
-            <path d={mouthArc()} />
-          </g>
-        </svg>
-      </header>
-    </div>
-  );
-}
+const Mouth = ({ mouthRadius, mouthWidth }) => {
+  const mouthArc = arc()
+    .innerRadius(mouthRadius)
+    .outerRadius(mouthRadius + mouthWidth)
+    .startAngle(Math.PI / 2)
+    .endAngle(Math.PI * 1.5);
+  return <path d={mouthArc()} />;
+};
+
+const App = () => (
+  <svg width={width} heigh t={height}>
+    <g transform={`translate(${centerX}, ${centerY})`}>
+      <BackgroundCircle
+        radius={centerY - strokeWidth / 2}
+        strokeWidth={strokeWidth}
+      />
+      <Eyes
+        eyeOffsetX={eyeOffsetX}
+        eyeOffsetY={eyeOffsetY}
+        eyeRadius={eyeRadius}
+      />
+      <Mouth mouthRadius={mouthRadius} mouthWidth={mouthWidth} />
+    </g>
+  </svg>
+);
 export default App;
